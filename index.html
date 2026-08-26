@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bartosz Chrostowski - programista</title>
+<meta name="description" content="Programista. Aplikacje webowe i mobilne, narzędzia do danych, modele uczenia maszynowego. Licencjat informatyki, Uniwersytet Łódzki.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  interpolate-size:allow-keywords;
+
+  /* Baza NEUTRALNA (nasycenie ~5-8%), fiolet wyłącznie jako akcent.
+     Wcześniej wszystkie powierzchnie miały odcień ~248° i nasycenie ~25%,
+     więc akcent nie miał z czym kontrastować poza jasnością. */
+  --ink:#F4F4F5;
+  --mut:#A1A1AA;
+  --hair:#2E3036;
+  --acc:#A78BFA;
+
+  --disp:"Familjen Grotesk",system-ui,sans-serif;
+  --body:"Karla",system-ui,sans-serif;
+  --num:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}}
+
+body{margin:0;color:var(--ink);font-family:var(--body);font-size:16.5px;
+  line-height:1.62;-webkit-font-smoothing:antialiased;
+  background:linear-gradient(180deg,#0E0E10,#0B0B0D 55%,#09090A);
+  background-attachment:fixed}
+
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:12px;top:-60px;z-index:40;background:var(--acc);
+  color:#1A1526;padding:11px 18px;border-radius:8px;font-weight:700;
+  text-decoration:none;transition:top .16s}
+.skip:focus{top:12px}
+
+.cv{max-width:1140px;margin:0 auto;padding:0 clamp(16px,4vw,34px) clamp(18px,3.5vw,42px);
+  display:grid;grid-template-columns:302px 1fr;gap:clamp(20px,3vw,36px);align-items:start}
+
+/* ---------------- otwarcie ---------------- */
+.hero{max-width:1140px;margin:0 auto;
+  padding:clamp(52px,9vw,116px) clamp(16px,4vw,34px) clamp(34px,5.5vw,64px);
+  display:grid;grid-template-columns:1fr auto;gap:clamp(26px,4vw,60px);align-items:center}
+.oko{font-family:var(--num);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--acc);margin:0 0 clamp(16px,2.2vw,24px)}
+.hero h1{font-family:var(--disp);font-weight:700;margin:0;
+  font-size:clamp(42px,8.2vw,76px);line-height:.95;letter-spacing:-.04em;color:var(--ink)}
+.hero h1 span{display:block}
+.kreska{width:62px;height:2px;background:var(--acc);margin:clamp(20px,2.8vw,30px) 0}
+.teza{font-size:clamp(18px,2.2vw,25px);line-height:1.38;color:var(--mut);
+  max-width:27ch;margin:0}
+.teza b{color:var(--ink);font-weight:600}
+.hero-stos{font-family:var(--num);font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+  color:#8F8F99;margin:clamp(24px,3.2vw,36px) 0 0}
+
+.foto{width:clamp(120px,16vw,182px);aspect-ratio:1;border-radius:20px;
+  display:grid;place-items:center;margin:0;
+  font-family:var(--disp);font-size:clamp(40px,5.2vw,58px);font-weight:700;
+  color:var(--acc);letter-spacing:-.02em;overflow:hidden;
+  background:#221D33;box-shadow:0 0 0 1px #3A3352 inset}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ---------------- panel ---------------- */
+.side{position:sticky;top:clamp(18px,3.5vw,42px);border:1px solid var(--hair);
+  border-radius:18px;padding:26px 24px;
+  background:linear-gradient(180deg,#1B1C20,#17181B);
+  box-shadow:0 24px 60px -40px rgba(0,0,0,.9);
+  /* panel bywa wyzszy niz okno - bez tego przyklejony blokuje sie
+     i konca nie da sie doczytac, dopoki nie przewinie sie calej prawej kolumny */
+  max-height:calc(100dvh - 2*clamp(18px,3.5vw,42px));
+  overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:thin;scrollbar-color:#3A3A44 transparent}
+.side::-webkit-scrollbar{width:8px}
+.side::-webkit-scrollbar-thumb{background:#3A3A44;border-radius:99px}
+.side::-webkit-scrollbar-track{background:transparent}
+.side-h{font-family:var(--num);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--mut);margin:24px 0 11px;padding-top:18px;border-top:1px solid var(--hair)}
+.side-h.pierwszy{border-top:0;padding-top:0;margin-top:0}
+
+.kon{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14.5px}
+.kon a{color:var(--ink);text-decoration:none;word-break:break-all}
+.kon a:hover{color:var(--acc)}
+.kon .lab{display:block;font-family:var(--num);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:#8A8A94;margin-bottom:2px}
+
+.tagi{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.tagi li{font-family:var(--num);font-size:11px;color:var(--mut);
+  border:1px solid var(--hair);border-radius:6px;padding:3px 8px;background:#1B1C1F}
+
+.fakt{font-size:14.5px;color:var(--mut);margin:0}
+.fakt b{color:var(--ink);font-weight:600}
+
+/* ---------------- treść ---------------- */
+.main{min-width:0}
+.blok{border:1px solid var(--hair);border-radius:18px;padding:clamp(22px,3vw,32px);
+  margin-bottom:clamp(15px,2vw,22px);background:linear-gradient(180deg,#161618,#121213);
+  box-shadow:0 24px 60px -46px rgba(0,0,0,.9)}
+.blok h2{font-family:var(--num);font-size:12px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink);font-weight:500;margin:0 0 20px;padding-bottom:13px;
+  border-bottom:1px solid var(--hair)}
+.blok h2::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:var(--acc);margin-right:9px;vertical-align:middle;transform:translateY(-2px)}
+.blok p{color:var(--mut);margin:0 0 12px;max-width:66ch}
+.blok p:last-child{margin-bottom:0}
+.blok b{color:var(--ink);font-weight:600}
+.lead{font-size:clamp(17px,1.7vw,20px);color:var(--ink);max-width:58ch;line-height:1.48}
+.wsk{font-family:var(--num);font-size:11.5px;color:#8A8A94;margin:-6px 0 16px}
+
+/* ---------------- karty ---------------- */
+.siatka{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  gap:14px;align-items:start}
+.k{position:relative;overflow:hidden;border:1px solid var(--hair);border-radius:15px;
+  background:linear-gradient(180deg,#212227,#1B1C1F);
+  transition:border-color .18s,box-shadow .18s,transform .18s}
+.k:hover{border-color:#3E4048;transform:translateY(-2px);
+  box-shadow:0 16px 34px -26px rgba(0,0,0,.9)}
+.k[open]{border-color:#4C4468;grid-column:1/-1;
+  box-shadow:0 20px 44px -30px rgba(0,0,0,.95)}
+
+/* karta wyróżniona: największy projekt dostaje pełną szerokość i mocniejszą ramkę */
+.k--glowny{grid-column:1/-1;border-color:#443C5E;
+  background:linear-gradient(180deg,#25242E,#1E1E24)}
+.k--glowny::after{width:4px;transform:scaleY(1)}
+.k--glowny .k-t{font-size:clamp(22px,2.5vw,27px)}
+.k--glowny .k-lead{font-size:16.5px;color:var(--ink)}
+.k--glowny summary{padding:26px 26px 24px}
+.znacznik{margin-left:auto;font-family:var(--num);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--acc);white-space:nowrap;margin-top:5px}
+.k::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--acc);
+  transform:scaleY(0);transform-origin:top;
+  transition:transform .28s cubic-bezier(.22,.61,.36,1)}
+.k:hover::after,.k[open]::after{transform:scaleY(1)}
+
+.k summary{list-style:none;cursor:pointer;padding:19px 21px;display:grid;gap:8px;
+  border-radius:15px;position:relative}
+.k summary::-webkit-details-marker{display:none}
+.k-gora{display:flex;gap:11px;align-items:flex-start}
+.k-ik{flex:0 0 auto;width:36px;height:36px;border-radius:9px;display:grid;place-items:center;
+  color:var(--acc);border:1px solid #33343A;margin-top:-1px}
+.k-ik svg{width:21px;height:21px}
+.k--glowny .k-ik{width:42px;height:42px;border-color:#463E62}
+.k--glowny .k-ik svg{width:24px;height:24px}
+.k-gora .k-t{flex:1 1 auto;min-width:0}
+.k-t{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.022em;
+  line-height:1.2;color:var(--ink)}
+.k summary:hover .k-t{color:var(--acc)}
+/* bez nowrap: dluga odznaka ("praca dyplomowa") ma sie zawinac, a nie zostac
+   ucieta przez overflow:hidden karty; text-align trzyma ja przy prawej krawedzi */
+.k-rola{flex:0 1 auto;margin-left:auto;font-family:var(--num);font-size:10px;
+  color:#8A8A94;margin-top:5px;letter-spacing:.11em;text-transform:uppercase;
+  text-align:right;line-height:1.35}
+.k-stack{font-family:var(--num);font-size:11px;color:#8A8A94}
+.k-lead{font-size:15px;color:var(--mut);line-height:1.5}
+.k-zn{position:absolute;right:19px;bottom:17px;width:18px;height:18px;color:#6C6C78;
+  transition:transform .22s,color .22s}
+.k[open] .k-zn{transform:rotate(180deg);color:var(--acc)}
+.k-body{padding:0 21px 22px}
+.k-body::before{content:"";display:block;height:1px;background:var(--hair);margin:0 0 16px}
+.k-body p{margin:0 0 12px;color:var(--mut);font-size:15.5px;max-width:76ch}
+.pod{font-family:var(--num);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--acc);font-weight:500;margin:20px 0 8px;display:flex;align-items:center;gap:9px}
+.pod::after{content:"";flex:1;height:1px;background:var(--hair)}
+.k-body p:last-child{margin-bottom:0}
+
+/* ---------------- edukacja ---------------- */
+.edu{display:grid;gap:15px}
+.edu-row{display:grid;grid-template-columns:78px 1fr;gap:16px;align-items:baseline;
+  padding-bottom:15px;border-bottom:1px solid var(--hair)}
+.edu-row:last-child{border-bottom:0;padding-bottom:0}
+.edu-when{font-family:var(--num);font-size:12.5px;color:var(--acc)}
+.edu-what{font-family:var(--disp);font-weight:700;font-size:16px;letter-spacing:-.012em;
+  color:var(--ink)}
+.edu-gdzie{display:block;color:var(--mut);font-size:15px;font-weight:400;
+  font-family:var(--body);letter-spacing:0;margin-top:4px}
+
+footer{max-width:1140px;margin:0 auto;padding:6px clamp(16px,4vw,34px) 48px;
+  color:#8A8A94;font-size:12px;font-family:var(--num)}
+footer p{margin:0}
+footer a{color:var(--acc)}
+
+/* ================= EFEKTY =================
+   Pod prefers-reduced-motion i @supports: przy wyłączonym ruchu znikają,
+   na starszych silnikach po prostu się nie pojawiają. */
+@media (prefers-reduced-motion:no-preference){
+  @supports selector(::details-content){
+    .k::details-content{block-size:0;overflow:hidden;
+      transition:block-size .38s cubic-bezier(.22,.61,.36,1),
+                 content-visibility .38s allow-discrete}
+    .k[open]::details-content{block-size:auto}
+  }
+  @supports (animation-timeline:view()){
+    .k,.blok{animation:wjazd linear both;animation-timeline:view();
+      animation-range:entry 0% entry 46%}
+    .side{animation:wjazd-panel .55s cubic-bezier(.22,.61,.36,1) both}
+  }
+  @keyframes wjazd{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes wjazd-panel{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+  .kon a{background-image:linear-gradient(var(--acc),var(--acc));
+    background-size:0 1.5px;background-position:0 100%;background-repeat:no-repeat;
+    transition:background-size .28s ease,color .18s}
+  .kon a:hover{background-size:100% 1.5px}
+}
+
+@media (max-width:880px){
+  .cv{grid-template-columns:1fr}
+  .side{position:static}
+  /* zdjęcie idzie nad nazwisko, żeby nagłówek dostał pełną szerokość */
+  .hero{grid-template-columns:1fr;gap:24px}
+  .hero .foto{order:-1}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .edu-row{grid-template-columns:1fr;gap:3px}
+  .teza{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="hero">
+  <div>
+    <p class="oko">Programista fullstack</p>
+    <h1><span>Bartosz</span><span>Chrostowski</span></h1>
+    <div class="kreska" aria-hidden="true"></div>
+    <p class="teza">Baza danych, API, interfejs, aplikacja w telefonie, wdrożenie.
+      <b>Cały pion, jedna osoba.</b></p>
+    <p class="hero-stos">Django · React · Flutter · Google Cloud</p>
+  </div>
+  <!-- Podmień na: <div class="foto"><img src="foto.jpg" alt="Bartosz Chrostowski"></div> -->
+  <div class="foto" aria-hidden="true">BC</div>
+</header>
+
+<div class="cv">
+
+  <aside class="side">
+    <h2 class="side-h pierwszy">Kontakt</h2>
+    <ul class="kon">
+      <li><span class="lab">E-mail</span>
+        <a href="mailto:b.chrostowski72@gmail.com">b.chrostowski72@gmail.com</a></li>
+      <li><span class="lab">Telefon</span>
+        <a href="tel:+48507371132">507 371 132</a></li>
+      <li><span class="lab">GitHub</span>
+        <a href="https://github.com/Rektos721">github.com/Rektos721</a></li>
+      <li><span class="lab">Lokalizacja</span>
+        <span>Łódź / Radomsko, praca zdalna</span></li>
+    </ul>
+
+    <h2 class="side-h">Czym pracuję</h2>
+    <ul class="tagi">
+      <li>Python</li><li>Django</li><li>DRF</li><li>Flask</li><li>FastAPI</li>
+      <li>PostgreSQL</li><li>MongoDB</li><li>SQLAlchemy</li>
+      <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Astro</li><li>Node.js</li>
+      <li>Dart</li><li>Flutter</li>
+      <li>scikit-learn</li><li>pandas</li><li>OpenCV</li><li>Kraken</li>
+      <li>lxml</li><li>shapely</li><li>pyproj</li><li>GDAL / GML</li>
+      <li>Google Cloud</li><li>Cloud Run</li><li>Docker</li><li>GitHub Actions</li>
+      <li>Playwright</li><li>pytest</li><li>Git</li>
+      <li>Claude API</li><li>MCP</li><li>Pygame</li>
+    </ul>
+
+    <h2 class="side-h">Studia</h2>
+    <p class="fakt"><b>Licencjat informatyki</b>, Uniwersytet Łódzki. Od października
+      studia magisterskie na tym samym wydziale.</p>
+  </aside>
+
+  <main class="main" id="tresc">
+
+    <section class="blok" aria-labelledby="o-mnie">
+      <h2 id="o-mnie">W skrócie</h2>
+      <p class="lead">Od bazy danych po interfejs: backend w Django i Node, frontend
+        w React i Astro, aplikacje mobilne we Flutterze, wdrożenia i utrzymanie
+        w Google Cloud.</p>
+      <p>Największy projekt napisałem w całości sam: system dla firm transportowych
+        z panelem dyspozytora, aplikacją kierowcy i modułami, które przejmują powtarzalną
+        część pracy spedytora. Obok tego narzędzia mierzące się z trudnymi danymi:
+        konwertery formatów urzędowych, odczyt pisma ręcznego, modele predykcyjne.</p>
+      <p>Dalej chcę iść w stronę uczenia maszynowego, systemów opartych o modele językowe
+        i automatyzacji procesów. Tam też idzie większość moich projektów własnych.</p>
+    </section>
+
+    <section class="blok" aria-labelledby="projekty">
+      <h2 id="projekty">Projekty</h2>
+      <p class="wsk">Kliknij kartę, żeby rozwinąć opis.</p>
+
+      <div class="siatka">
+
+        <details class="k k--glowny" open>
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v10H2zM13 10h4l4 4v3h-8z"/><circle cx="6" cy="18.5" r="1.7"/><circle cx="17" cy="18.5" r="1.7"/></svg></span><span class="k-t">Reload, system dla firm transportowych</span>
+              <span class="znacznik">największy projekt</span></span>
+            <span class="k-stack">React · Django · DRF · Flutter · PostgreSQL · Google Cloud · Claude API</span>
+            <span class="k-lead">Cały system napisany samodzielnie: aplikacja dla dyspozytora,
+              aplikacja kierowcy, integracje i trzy moduły automatyzujące pracę spedytora.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Firma szuka dodatkowego ładunku na trasie, którą auto i tak jedzie.
+              Dyspozytor widzi pozycję auta na mapie, wolne miejsce i wyliczoną
+              opłacalność zlecenia.</p>
+
+            <h3 class="pod">Aplikacja</h3>
+            <p>Backend: modele, API, uwierzytelnianie tokenami, limitowanie zapytań,
+              wdrożenie w Google Cloud. Frontend: mapy, planowanie i optymalizacja tras,
+              wycena zleceń, czas dojazdu, rozliczanie postojów, ponad osiemset
+              automatycznych testów. Osobna aplikacja kierowcy we Flutterze, z nawigacją
+              zakręt po zakręcie.</p>
+
+            <h3 class="pod">Asystent rozmów</h3>
+            <p>Przy każdej ofercie padają te same pytania: czy aktualna, jaka stawka,
+              jakie wymagania. Przy dwudziestu naraz nie da się tego ogarnąć ręcznie.
+              Bot pyta zamiast człowieka, ale używa wyłącznie zdań zatwierdzonych wcześniej
+              przez firmę i nie pisze nic od siebie. Rozmowa jest widoczna w aplikacji,
+              człowiek przejmuje ją jednym kliknięciem, o cenach rozmawia już tylko on.
+              Moduł działa u klienta na produkcji.</p>
+
+            <h3 class="pod">Automat do wyceny</h3>
+            <p>Liczy trasę, opłaty drogowe, czas i to, czy towar zmieści się w aucie,
+              czyli najbardziej żmudną część pracy spedytora. Korzysta z tych samych reguł
+              co reszta systemu, żeby nie powstały dwie różne wyceny tego samego zlecenia.</p>
+
+            <h3 class="pod">Skaner giełd i bot WhatsApp</h3>
+            <p>Oferty żyją kilka minut, a nikt nie siedzi przy komputerze całą dobę.
+              Skaner chodzi bez przerwy na maszynie w chmurze, którą postawiłem
+              i utrzymuję sam, przegląda cztery giełdy i liczy opłacalność kursu przy
+              aktualnej pozycji auta. Przy trafieniu wysyła wiadomość na WhatsAppa:
+              z przyciskami do decyzji, mapką trasy i nagraniem głosowym do odsłuchania
+              za kierownicą.</p>
+
+            <p>Całość napisana przeze mnie, od bazy danych po ekran w telefonie.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 7 6-3 6 3 6-3v13l-6 3-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg></span><span class="k-t">Konwerter danych dla urzędów</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Python · lxml · shapely · pyproj</span>
+            <span class="k-lead">Zamienia mapy i rejestry gminne na format wymagany przepisami.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Dane od geodety, dane w urzędzie i wymóg ustawowy to trzy różne formaty. Ręczne przepisywanie zajmuje tygodnie.</p>
+            <p>Przerobiony materiał: 240 gmin, ponad 810 tysięcy adresów, bez uszkodzonego wpisu.</p>
+            <p>Drugi tryb sprawdza cudze pliki przed wysyłką do urzędu. Na ośmiu planach zagospodarowania znalazł błąd w dokumencie, który przeszedł kontrolę rządowego walidatora i został opublikowany.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M22 20V8"/></svg></span><span class="k-t">ROZSTRZAŁ, porównywarka kursów</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Node.js · React · Express</span>
+            <span class="k-lead">Zbiera kursy dziewięciu bukmacherów i szuka odstających od reszty rynku.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Każdy udostępnia dane inaczej, więc każde źródło to osobny czytnik. Trudniejsze było rozpoznanie, że „Real Madryt - Barcelona" i „Real Madrid - FC Barcelona" to ten sam mecz.</p>
+            <p>Po odsianiu fałszywych alarmów wyszło, że przy zakładach na żywo przewagi nie ma. Wynik negatywny, ale wynik.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".9" fill="currentColor"/></svg></span><span class="k-t">Przewidywanie wyników meczów</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Python · scikit-learn · PostgreSQL</span>
+            <span class="k-lead">Model dostaje historię kilku tysięcy meczów e-sportowych i typuje wynik następnego.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Trafia częściej niż typowanie faworyta z rankingu. Sprawdzałem jednak nie tylko trafność, ale też czy model nie jest przemądrzały: gdy mówi 43%, takie mecze kończą się wygraną mniej więcej w 43 na 100. Model pewny siebie i mylący się jest przy zakładach gorszy od rzutu monetą.</p>
+            <p>Uczy się wyłącznie na tym, co było wiadomo przed meczem. Kod publiczny.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5"/><path d="M8.5 14c1.5-2 2.5 2 4 0s2-1.5 3 .5"/></svg></span><span class="k-t">Odczyt pisma ręcznego</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Python · Kraken · OpenCV</span>
+            <span class="k-lead">Czyta odręczne zapiski ze starych ksiąg parafialnych.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Skany z XIX wieku, wyblakły atrament, nierówne pismo. Trafność około osiemdziesięciu ośmiu procent, więc człowiek poprawia zamiast przepisywać.</p>
+            <p>Docelowo gminne rejestry wniosków budowlanych, z powiązaniem numerów działek z mapą.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg></span><span class="k-t">Serwis medycyny podróży</span>
+              <span class="k-rola">komercyjny</span></span>
+            <span class="k-stack">Astro · TypeScript · GitHub Actions</span>
+            <span class="k-lead">Sto krajów, biblioteka preparatów, kalkulator ceny szczepień i moduł ostrzeżeń zdrowotnych.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Pacjent wybiera kraj i dostaje komplet informacji: jakie szczepienia, jakie zagrożenia, co spakować do apteczki, ile to kosztuje. Sto takich podstron plus osobne strony dla dwudziestu pięciu preparatów.</p>
+            <p>Wszystkie generują się z jednego silnika i z plików z treścią, więc poprawka wchodzi wszędzie naraz, a dołożenie kolejnego kraju to uzupełnienie danych, nie pisanie strony od nowa. Układ przygotowany pod przyszłe wersje językowe.</p>
+            <p><b>Kalkulator ceny</b> liczy koszt szczepień dla wybranego wyjazdu. <b>Moduł ostrzeżeń</b> zaciąga bieżące komunikaty zdrowotne z zewnętrznych źródeł. <b>Moduł aktualności</b> pobiera wpisy z mediów społecznościowych przychodni razem ze zdjęciami i filmami, przechowuje je u siebie i odświeża automatycznie.</p>
+            <p>W procesie wdrożeniowym siedzi kontrola, która nie wypuści zmiany łamiącej przepisy o informowaniu o lekach. Przy okazji zmniejszyłem wagę materiałów graficznych z 371 do 139 megabajtów, bez straty jakości.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 18H7a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 10.5a3.75 3.75 0 0 1-.5 7.5z"/></svg></span><span class="k-t">Chmura i utrzymanie</span>
+              <span class="k-rola">praca i własne</span></span>
+            <span class="k-stack">Google Cloud · Cloud Run · Cloud Storage · Docker</span>
+            <span class="k-lead">Stawianie maszyn, wdrożenia, przeglądy projektów
+              i porządki w kosztach.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Poza pisaniem kodu zajmuję się tym, na czym on chodzi. Stawiam maszyny
+              wirtualne od zera, wdrażam usługi w Cloud Run, konfiguruję uprawnienia
+              i dostępy, ustawiam harmonogramy oraz kontrolę stanu.</p>
+            <p>Robiłem przeglądy projektów w chmurze: co realnie generuje koszty, gdzie
+              leżą zduplikowane dane w kubełkach, które uprawnienia są szersze, niż
+              powinny. Przy jednym z systemów przeprowadziłem też przegląd bezpieczeństwa
+              i znalazłem zabezpieczenie logowania, które formalnie istniało, ale
+              w praktyce nigdy się nie uruchamiało.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 1.5v5M12 17.5v5M1.5 12h5M17.5 12h5"/></svg></span><span class="k-t">Asystent do gry</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Node.js · Tesseract.js · Web Speech</span>
+            <span class="k-lead">Podpowiada, jak rzucić granat z miejsca, w którym stoi gracz.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Gra przekazuje stan rozgrywki, program dodatkowo odczytuje nazwę miejsca z ekranu. Podpowiedź ląduje na drugim monitorze albo leci głosem.</p>
+            <p>722 rzuty na dziewięciu mapach.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m12 7.5 3.8 2.8-1.5 4.5h-4.6l-1.5-4.5z"/><path d="M12 3.5v4M4.6 9.3l3.6 2.6M19.4 9.3l-3.6 2.6M7.7 19.6l2-4.8M16.3 19.6l-2-4.8"/></svg></span><span class="k-t">Gra o karierze piłkarza</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Python · Pygame</span>
+            <span class="k-lead">Gra, w której prowadzisz karierę jednego piłkarza:
+              od młodzieżówki, przez transfery, po koniec kariery.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>67 lig i ponad tysiąc klubów. Sezon liczy się w tle, kluczowe akcje
+              rozgrywasz sam.</p>
+            <p>W grach tego typu o golu decyduje zwykle rzut kostką. Tutaj piłka leci po torze, a bramkarz może jej nie dosięgnąć. Fizykę odtworzyłem z gry sprzed lat, rozkładając ją na czynniki pierwsze.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="7" rx="1.5"/><rect x="13" y="3" width="8" height="4" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/></svg></span><span class="k-t">MIM, panel do ogarniania codzienności</span>
+              <span class="k-rola">praca dyplomowa</span></span>
+            <span class="k-stack">React · Node.js · Express · MongoDB</span>
+            <span class="k-lead">Nawyki, wydatki, kalendarz, notatki i nastrój
+              w jednym miejscu.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Zamiast pięciu aplikacji do pięciu rzeczy jedna, w której wszystko widać
+              obok siebie. Wydatki z podziałem na kategorie, nawyki odhaczane dzień po dniu,
+              kalendarz spięty z kontem Google.</p>
+            <p>Logowanie oparte o solone hasła i sesje po stronie serwera, nie o gotową
+              wtyczkę. Do tego moduł, który opisuje słowami, co wynika z liczb: gdzie
+              uciekają pieniądze, który nawyk się sypie. Działa na modelu uruchomionym
+              lokalnie, a gdy ten nie odpowiada, wchodzą zwykłe reguły, więc funkcja
+              nie znika.</p>
+            <p>Obroniona w 2026 roku na Uniwersytecie Łódzkim.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h11v9H8.5L4.5 17v-3H3z"/><path d="M6.5 9.5h4M8.5 7.5v4"/><path d="M20.5 19h-9v-2l3-3h6z"/></svg></span><span class="k-t">Palabra, nauka hiszpańskiego</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Flutter · Dart</span>
+            <span class="k-lead">Aplikacja na telefon. Słówka przewija się kciukiem
+              jak filmiki w mediach społecznościowych.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Aplikacje do nauki słówek zwykle wyglądają jak zadanie domowe i po tygodniu
+              się je porzuca. Tutaj układ jest taki sam jak w aplikacjach, w których ludzie
+              i tak spędzają godziny: jedno słowo na ekran, przewijasz w górę, następne.</p>
+            <p>Pod spodem działa algorytm powtórek rozłożonych w czasie. Sam ustala,
+              kiedy pokazać dane słowo ponownie: to, które znasz, wraca za tydzień,
+              to, na którym się potykasz, za dzień. Dzięki temu nauka trzyma się dłużej
+              niż do najbliższego sprawdzianu.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section class="blok" aria-labelledby="llm">
+      <h2 id="llm">Sztuczna inteligencja w praktyce</h2>
+      <p>Buduję rozwiązania oparte o modele językowe tam, gdzie da się je kontrolować.
+        W asystencie rozmów model nie pisze wolnego tekstu, tylko składa wypowiedzi
+        z wcześniej zatwierdzonych zdań, więc firma zawsze wie, co trafia do klienta.
+        Poza tym: model jako pomoc przy odczycie pisma ręcznego i moduł podsumowań
+        w pracy dyplomowej.</p>
+      <p><b>Znam zakres ścieżki Claude Certified Architect - Foundations</b>: projektowanie
+        systemów opartych o modele, integracje, inżynieria promptu, zarządzanie kontekstem.</p>
+    </section>
+
+    <section class="blok" aria-labelledby="jak">
+      <h2 id="jak">Jak pracuję</h2>
+      <p>Zanim napiszę kod, próbuję zrozumieć cudzy format, przepis albo protokół.
+        Sprawdzam własne założenia zamiast przyjmować je na słowo, a wyniki podaję
+        z liczbami, również wtedy, gdy wychodzą przeciwko temu, co budowałem.</p>
+    </section>
+
+    <section class="blok" aria-labelledby="edukacja">
+      <h2 id="edukacja">Wykształcenie</h2>
+      <div class="edu">
+        <div class="edu-row">
+          <span class="edu-when">od 2026</span>
+          <span class="edu-what">Informatyka, studia magisterskie
+            <span class="edu-gdzie">Uniwersytet Łódzki, Wydział Matematyki i Informatyki</span></span>
+        </div>
+        <div class="edu-row">
+          <span class="edu-when">2026</span>
+          <span class="edu-what">Licencjat z informatyki
+            <span class="edu-gdzie">Uniwersytet Łódzki. Praca dyplomowa: MIM, opisana wyżej.</span></span>
+        </div>
+        <div class="edu-row">
+          <span class="edu-when">2022</span>
+          <span class="edu-what">Matura, profil mat-fiz-inf
+            <span class="edu-gdzie">II Liceum Ogólnokształcące im. Krzysztofa Kamila
+              Baczyńskiego w Radomsku</span></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>Strona zbudowana bez frameworka i bez JavaScriptu.</p>
+</footer>
+
+</body>
+</html>
