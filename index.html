@@ -169,6 +169,7 @@ body{margin:0;color:var(--ink);font-family:var(--body);font-size:16.5px;
   color:var(--acc);font-weight:500;margin:20px 0 8px;display:flex;align-items:center;gap:9px}
 .pod::after{content:"";flex:1;height:1px;background:var(--hair)}
 .k-body p:last-child{margin-bottom:0}
+.k-body a{color:var(--acc);text-underline-offset:3px}
 
 /* ---------------- edukacja ---------------- */
 .edu{display:grid;gap:15px}
@@ -232,9 +233,9 @@ footer a{color:var(--acc)}
     <p class="oko">Programista fullstack</p>
     <h1><span>Bartosz</span><span>Chrostowski</span></h1>
     <div class="kreska" aria-hidden="true"></div>
-    <p class="teza">Baza danych, API, interfejs, aplikacja w telefonie, wdrożenie.
-      <b>Cały pion, jedna osoba.</b></p>
-    <p class="hero-stos">Django · React · Flutter · Google Cloud</p>
+    <p class="teza">Piszę systemy od bazy danych po aplikację w telefonie
+      i <b>sam je wdrażam i utrzymuję w chmurze.</b></p>
+    <p class="hero-stos">Python · Django · Astro · React · Flutter · Google Cloud</p>
   </div>
   <!-- Podmień na: <div class="foto"><img src="foto.jpg" alt="Bartosz Chrostowski"></div> -->
   <div class="foto" aria-hidden="true">BC</div>
@@ -258,34 +259,33 @@ footer a{color:var(--acc)}
     <h2 class="side-h">Czym pracuję</h2>
     <ul class="tagi">
       <li>Python</li><li>Django</li><li>DRF</li><li>Flask</li><li>FastAPI</li>
-      <li>PostgreSQL</li><li>MongoDB</li><li>SQLAlchemy</li>
+      <li>PostgreSQL</li><li>MongoDB</li><li>Firestore</li><li>SQLAlchemy</li>
       <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Astro</li><li>Node.js</li>
-      <li>Dart</li><li>Flutter</li>
+      <li>Dart</li><li>Flutter</li><li>C#</li><li>Unity</li><li>Godot</li><li>Blender</li>
       <li>scikit-learn</li><li>pandas</li><li>OpenCV</li><li>Kraken</li>
       <li>lxml</li><li>shapely</li><li>pyproj</li><li>GDAL / GML</li>
-      <li>Google Cloud</li><li>Cloud Run</li><li>Docker</li><li>GitHub Actions</li>
-      <li>Playwright</li><li>pytest</li><li>Git</li>
-      <li>Claude API</li><li>MCP</li><li>Pygame</li>
+      <li>Google Cloud</li><li>Compute Engine</li><li>Cloud Run</li><li>Docker</li><li>Linux</li>
+      <li>GitHub Actions</li><li>Playwright</li><li>pytest</li><li>Git</li>
+      <li>Claude API</li><li>Gemini API</li><li>MCP</li><li>Pygame</li>
     </ul>
 
     <h2 class="side-h">Studia</h2>
-    <p class="fakt"><b>Licencjat informatyki</b>, Uniwersytet Łódzki. Od października
-      studia magisterskie na tym samym wydziale.</p>
+    <p class="fakt"><b>Licencjat informatyki</b>, Uniwersytet Łódzki. Teraz studia
+      magisterskie na tym samym wydziale.</p>
   </aside>
 
   <main class="main" id="tresc">
 
     <section class="blok" aria-labelledby="o-mnie">
       <h2 id="o-mnie">W skrócie</h2>
-      <p class="lead">Od bazy danych po interfejs: backend w Django i Node, frontend
-        w React i Astro, aplikacje mobilne we Flutterze, wdrożenia i utrzymanie
-        w Google Cloud.</p>
-      <p>Największy projekt napisałem w całości sam: system dla firm transportowych
-        z panelem dyspozytora, aplikacją kierowcy i modułami, które przejmują powtarzalną
-        część pracy spedytora. Obok tego narzędzia mierzące się z trudnymi danymi:
-        konwertery formatów urzędowych, odczyt pisma ręcznego, modele predykcyjne.</p>
-      <p>Dalej chcę iść w stronę uczenia maszynowego, systemów opartych o modele językowe
-        i automatyzacji procesów. Tam też idzie większość moich projektów własnych.</p>
+      <p class="lead">Pracuję zdalnie przy dwóch projektach komercyjnych: serwisie
+        kliniki medycyny podróży i systemie dla firm transportowych. W obu odpowiadam
+        za całość, od kodu po wdrożenie.</p>
+      <p>Po godzinach biorę się za trudne dane: formaty urzędowe, pismo ręczne
+        z XIX-wiecznych ksiąg, historię meczów, z której model typuje wyniki. Od jesieni
+        robię też dwie gry, w tym sieciową w Unity.</p>
+      <p>Najbardziej ciągnie mnie do systemów opartych o modele językowe i automatyzacji
+        procesów, więc tam idzie większość nowych projektów.</p>
     </section>
 
     <section class="blok" aria-labelledby="projekty">
@@ -298,9 +298,9 @@ footer a{color:var(--acc)}
           <summary>
             <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v10H2zM13 10h4l4 4v3h-8z"/><circle cx="6" cy="18.5" r="1.7"/><circle cx="17" cy="18.5" r="1.7"/></svg></span><span class="k-t">Reload, system dla firm transportowych</span>
               <span class="znacznik">największy projekt</span></span>
-            <span class="k-stack">React · Django · DRF · Flutter · PostgreSQL · Google Cloud · Claude API</span>
-            <span class="k-lead">Cały system napisany samodzielnie: aplikacja dla dyspozytora,
-              aplikacja kierowcy, integracje i trzy moduły automatyzujące pracę spedytora.</span>
+            <span class="k-stack">React · Django · DRF · Flutter · PostgreSQL · Google Cloud · Firestore · Claude API</span>
+            <span class="k-lead">Napisany w całości przeze mnie: panel dyspozytora, aplikacja
+              kierowcy, backend i agent w chmurze, który przegląda giełdy frachtowe.</span>
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
@@ -309,34 +309,96 @@ footer a{color:var(--acc)}
               opłacalność zlecenia.</p>
 
             <h3 class="pod">Aplikacja</h3>
-            <p>Backend: modele, API, uwierzytelnianie tokenami, limitowanie zapytań,
-              wdrożenie w Google Cloud. Frontend: mapy, planowanie i optymalizacja tras,
-              wycena zleceń, czas dojazdu, rozliczanie postojów, ponad osiemset
-              automatycznych testów. Osobna aplikacja kierowcy we Flutterze, z nawigacją
-              zakręt po zakręcie.</p>
+            <p>Backend ma modele, API, logowanie tokenami, limity zapytań i ponad osiemset
+              automatycznych testów, a chodzi w Google Cloud. W panelu są mapy, planowanie
+              tras, wycena zleceń, czas dojazdu i rozliczanie postojów. Aplikację kierowcy
+              napisałem osobno we Flutterze, z nawigacją zakręt po zakręcie po trasie
+              dla ciężarówki.</p>
 
             <h3 class="pod">Asystent rozmów</h3>
             <p>Przy każdej ofercie padają te same pytania: czy aktualna, jaka stawka,
-              jakie wymagania. Przy dwudziestu naraz nie da się tego ogarnąć ręcznie.
-              Bot pyta zamiast człowieka, ale używa wyłącznie zdań zatwierdzonych wcześniej
-              przez firmę i nie pisze nic od siebie. Rozmowa jest widoczna w aplikacji,
-              człowiek przejmuje ją jednym kliknięciem, o cenach rozmawia już tylko on.
-              Moduł działa u klienta na produkcji.</p>
+              jakie wymagania. Przy dwudziestu ofertach naraz ręcznie się tego nie obsłuży,
+              więc pyta bot, ale wyłącznie zdaniami, które firma wcześniej zatwierdziła.
+              Rozmowę widać w aplikacji i człowiek przejmuje ją jednym kliknięciem, a o cenach
+              rozmawia już tylko on. Moduł działa u klienta na produkcji.</p>
 
             <h3 class="pod">Automat do wyceny</h3>
-            <p>Liczy trasę, opłaty drogowe, czas i to, czy towar zmieści się w aucie,
-              czyli najbardziej żmudną część pracy spedytora. Korzysta z tych samych reguł
-              co reszta systemu, żeby nie powstały dwie różne wyceny tego samego zlecenia.</p>
+            <p>Liczy trasę, opłaty drogowe, czas i to, czy towar zmieści się w aucie.
+              Korzysta z tych samych reguł co reszta systemu, żeby to samo zlecenie
+              nie dostało dwóch różnych wycen.</p>
 
-            <h3 class="pod">Skaner giełd i bot WhatsApp</h3>
+            <h3 class="pod">Agent na giełdach frachtowych</h3>
             <p>Oferty żyją kilka minut, a nikt nie siedzi przy komputerze całą dobę.
-              Skaner chodzi bez przerwy na maszynie w chmurze, którą postawiłem
-              i utrzymuję sam, przegląda cztery giełdy i liczy opłacalność kursu przy
-              aktualnej pozycji auta. Przy trafieniu wysyła wiadomość na WhatsAppa:
-              z przyciskami do decyzji, mapką trasy i nagraniem głosowym do odsłuchania
-              za kierownicą.</p>
+              Na maszynie w Google Cloud, którą postawiłem i utrzymuję, działa trwale
+              zalogowana sesja giełd i agent, który steruje tą przeglądarką. Skaner
+              przegląda cztery giełdy i liczy opłacalność kursu przy aktualnej pozycji auta.
+              Trafienie przychodzi na WhatsAppa z przyciskami do decyzji, mapką trasy
+              i nagraniem głosowym do odsłuchania za kierownicą.</p>
 
-            <p>Całość napisana przeze mnie, od bazy danych po ekran w telefonie.</p>
+            <h3 class="pod">Parowanie aut z ładunkami</h3>
+            <p>Dla spedycji ten sam agent kojarzy ładunki z wolnymi autami innych
+              przewoźników. Oferty pojazdów bierze prosto z API giełdy: ponad trzy tysiące
+              aut w promieniu 350 km od Łodzi przychodzi w niecałą sekundę, podczas gdy
+              na stronie widać ich 29. Zlecenia i kontrahenci siedzą w Firestore,
+              a podsumowanie idzie trzy razy dziennie.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg></span><span class="k-t">Serwis medycyny podróży</span>
+              <span class="k-rola">komercyjny</span></span>
+            <span class="k-stack">Astro · TypeScript · Node.js · GitHub Actions · Search Console</span>
+            <span class="k-lead">Ponad sto krajów, biblioteka preparatów, kalkulator ceny szczepień i moduł ostrzeżeń zdrowotnych.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Pacjent wybiera kraj i dostaje komplet informacji: jakie szczepienia, jakie zagrożenia, co spakować do apteczki, ile to kosztuje. Takich podstron jest ponad sto, do tego osobne strony dwudziestu pięciu preparatów z mapami ryzyka chorób.</p>
+            <p>Wszystkie generują się z jednego silnika i z plików z treścią. Poprawka wchodzi wszędzie naraz, a kolejny kraj powstaje przez uzupełnienie danych. Układ jest gotowy na przyszłe wersje językowe.</p>
+            <p><b>Kalkulator ceny</b> liczy koszt szczepień dla wybranego wyjazdu. <b>Moduł ostrzeżeń</b> przy każdym buildzie pobiera bieżące komunikaty zdrowotne z zewnętrznych źródeł. <b>Moduł aktualności</b> ściąga wpisy przychodni z Facebooka razem ze zdjęciami i filmami, trzyma je u siebie, a filmy dostają automatyczną transkrypcję.</p>
+            <p>Każda zmiana przechodzi cztery automatyczne kontrole: kompletność strony, martwe linki, poprawność treści i ostrzeżeń. Jedna z nich pilnuje przepisów o informowaniu o lekach. Wagę materiałów graficznych zmniejszyłem z 371 do 139 megabajtów bez straty jakości, a indeksowanie śledzę w Search Console.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="k-t">Weryfikator przewoźnika</span>
+              <span class="k-rola">w pracy</span></span>
+            <span class="k-stack">Python · biała lista VAT · KRS · VIES</span>
+            <span class="k-lead">Zanim przewoźnik dostanie ładunek, program sprawdza go w trzech publicznych rejestrach.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Biała lista Ministerstwa Finansów potwierdza firmę i jej rachunek, pełny odpis z KRS pokazuje historię zmian, a unijny VIES numer VAT. Jeśli w ciągu pół roku zmieniły się co najmniej dwie z czterech rzeczy (nazwa, siedziba, zarząd, wspólnicy), werdykt jest czerwony, bo to typowy ślad wydmuszki.</p>
+            <p>Działa na samej bibliotece standardowej i jest wpięty w agenta, który paruje auta z ładunkami. Reguły sprawdziłem testami mutacyjnymi: psułem każdą po kolei i patrzyłem, czy testy to wyłapią.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg></span><span class="k-t">Wycinka wyspy, gra co-op</span>
+              <span class="k-rola">w produkcji</span></span>
+            <span class="k-stack">Unity 6 · C# · Netcode for GameObjects · Steam · Blender</span>
+            <span class="k-lead">Gracze razem wycinają całą wyspę: ścinanie, sprzedaż drewna, pracownicy i automatyzacja.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Gra działa w sieci przez LAN i Steam. Las jest za duży, żeby przesyłać go drzewo po drzewie, więc każdy gracz buduje go u siebie z tego samego ziarna. Host numeruje zdarzenia, czyli uderzenie, wyrwanie korzenia i upadek pnia, a goście stosują je dokładnie w tej kolejności.</p>
+            <p>W teście wydajności 200 tysięcy drzew chodzi w 327 klatkach na sekundę. Modele postaci, np. starego kapitana, generuję skryptami Pythona w Blenderze.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg></span><span class="k-t">RPG z walką na kościach</span>
+              <span class="k-rola">w produkcji</span></span>
+            <span class="k-stack">Godot · GDScript · pixel art</span>
+            <span class="k-lead">Turowa walka na siatce, rozstrzygana jawnymi rzutami k20 jak przy stole.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Gracz wybiera postać, ruch, umiejętność i cel, a potem widzi rzut i jego skutek. Drużyna rośnie z jednej do pięciu postaci, a skład wybiera się przed walką z większej stajni bohaterów.</p>
+            <p>Reguły walki żyją osobno od widoku i mają własne testy, dzięki czemu balans sprawdzam symulacją, bez uruchamiania gry. Animacje powstają z arkuszy póz rysowanych w pixel arcie.</p>
           </div>
         </details>
 
@@ -349,23 +411,8 @@ footer a{color:var(--acc)}
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Dane od geodety, dane w urzędzie i wymóg ustawowy to trzy różne formaty. Ręczne przepisywanie zajmuje tygodnie.</p>
-            <p>Przerobiony materiał: 240 gmin, ponad 810 tysięcy adresów, bez uszkodzonego wpisu.</p>
+            <p>Dane od geodety, dane w urzędzie i wymóg ustawowy to trzy różne formaty, a ręczne przepisywanie zajmuje tygodnie. Przez konwerter przeszło 240 gmin i ponad 810 tysięcy adresów bez jednego uszkodzonego wpisu.</p>
             <p>Drugi tryb sprawdza cudze pliki przed wysyłką do urzędu. Na ośmiu planach zagospodarowania znalazł błąd w dokumencie, który przeszedł kontrolę rządowego walidatora i został opublikowany.</p>
-          </div>
-        </details>
-
-        <details class="k">
-          <summary>
-            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M22 20V8"/></svg></span><span class="k-t">ROZSTRZAŁ, porównywarka kursów</span>
-              <span class="k-rola">własny</span></span>
-            <span class="k-stack">Node.js · React · Express</span>
-            <span class="k-lead">Zbiera kursy dziewięciu bukmacherów i szuka odstających od reszty rynku.</span>
-            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-          </summary>
-          <div class="k-body">
-            <p>Każdy udostępnia dane inaczej, więc każde źródło to osobny czytnik. Trudniejsze było rozpoznanie, że „Real Madryt - Barcelona" i „Real Madrid - FC Barcelona" to ten sam mecz.</p>
-            <p>Po odsianiu fałszywych alarmów wyszło, że przy zakładach na żywo przewagi nie ma. Wynik negatywny, ale wynik.</p>
           </div>
         </details>
 
@@ -378,8 +425,22 @@ footer a{color:var(--acc)}
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Trafia częściej niż typowanie faworyta z rankingu. Sprawdzałem jednak nie tylko trafność, ale też czy model nie jest przemądrzały: gdy mówi 43%, takie mecze kończą się wygraną mniej więcej w 43 na 100. Model pewny siebie i mylący się jest przy zakładach gorszy od rzutu monetą.</p>
-            <p>Uczy się wyłącznie na tym, co było wiadomo przed meczem. Kod publiczny.</p>
+            <p>Trafia częściej niż typowanie faworyta z rankingu. Sprawdziłem też kalibrację: gdy model mówi 43%, takie mecze kończą się wygraną mniej więcej w 43 na 100. Przy zakładach pewny siebie model, który się myli, kosztuje więcej niż żaden.</p>
+            <p>Uczy się wyłącznie na tym, co było wiadomo przed meczem. Kod jest publiczny: <a href="https://github.com/Rektos721/esport-value">github.com/Rektos721/esport-value</a>.</p>
+          </div>
+        </details>
+
+        <details class="k">
+          <summary>
+            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-7M22 20V8"/></svg></span><span class="k-t">ROZSTRZAŁ, porównywarka kursów</span>
+              <span class="k-rola">własny</span></span>
+            <span class="k-stack">Node.js · React · Express</span>
+            <span class="k-lead">Zbiera kursy dziewięciu bukmacherów i szuka odstających od reszty rynku.</span>
+            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="k-body">
+            <p>Każdy bukmacher udostępnia dane inaczej, więc każde źródło ma osobny czytnik. Trudniej było rozpoznać, że „Real Madryt - Barcelona" i „Real Madrid - FC Barcelona" to ten sam mecz.</p>
+            <p>Po odsianiu fałszywych alarmów wyszło, że przy zakładach na żywo przewagi nie ma, i tak to zapisałem, razem z liczbami.</p>
           </div>
         </details>
 
@@ -387,29 +448,13 @@ footer a{color:var(--acc)}
           <summary>
             <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5"/><path d="M8.5 14c1.5-2 2.5 2 4 0s2-1.5 3 .5"/></svg></span><span class="k-t">Odczyt pisma ręcznego</span>
               <span class="k-rola">własny</span></span>
-            <span class="k-stack">Python · Kraken · OpenCV</span>
+            <span class="k-stack">Python · Kraken · OpenCV · Gemini</span>
             <span class="k-lead">Czyta odręczne zapiski ze starych ksiąg parafialnych.</span>
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Skany z XIX wieku, wyblakły atrament, nierówne pismo. Trafność około osiemdziesięciu ośmiu procent, więc człowiek poprawia zamiast przepisywać.</p>
-            <p>Docelowo gminne rejestry wniosków budowlanych, z powiązaniem numerów działek z mapą.</p>
-          </div>
-        </details>
-
-        <details class="k">
-          <summary>
-            <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg></span><span class="k-t">Serwis medycyny podróży</span>
-              <span class="k-rola">komercyjny</span></span>
-            <span class="k-stack">Astro · TypeScript · GitHub Actions</span>
-            <span class="k-lead">Sto krajów, biblioteka preparatów, kalkulator ceny szczepień i moduł ostrzeżeń zdrowotnych.</span>
-            <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-          </summary>
-          <div class="k-body">
-            <p>Pacjent wybiera kraj i dostaje komplet informacji: jakie szczepienia, jakie zagrożenia, co spakować do apteczki, ile to kosztuje. Sto takich podstron plus osobne strony dla dwudziestu pięciu preparatów.</p>
-            <p>Wszystkie generują się z jednego silnika i z plików z treścią, więc poprawka wchodzi wszędzie naraz, a dołożenie kolejnego kraju to uzupełnienie danych, nie pisanie strony od nowa. Układ przygotowany pod przyszłe wersje językowe.</p>
-            <p><b>Kalkulator ceny</b> liczy koszt szczepień dla wybranego wyjazdu. <b>Moduł ostrzeżeń</b> zaciąga bieżące komunikaty zdrowotne z zewnętrznych źródeł. <b>Moduł aktualności</b> pobiera wpisy z mediów społecznościowych przychodni razem ze zdjęciami i filmami, przechowuje je u siebie i odświeża automatycznie.</p>
-            <p>W procesie wdrożeniowym siedzi kontrola, która nie wypuści zmiany łamiącej przepisy o informowaniu o lekach. Przy okazji zmniejszyłem wagę materiałów graficznych z 371 do 139 megabajtów, bez straty jakości.</p>
+            <p>Skany są z XIX wieku, atrament wyblakły, pismo nierówne. Trafność wynosi około osiemdziesięciu ośmiu procent, więc człowiek poprawia odczyt, zamiast przepisywać całość.</p>
+            <p>Docelowo program ma czytać gminne rejestry wniosków budowlanych i wiązać numery działek z mapą.</p>
           </div>
         </details>
 
@@ -417,20 +462,20 @@ footer a{color:var(--acc)}
           <summary>
             <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 18H7a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 10.5a3.75 3.75 0 0 1-.5 7.5z"/></svg></span><span class="k-t">Chmura i utrzymanie</span>
               <span class="k-rola">praca i własne</span></span>
-            <span class="k-stack">Google Cloud · Cloud Run · Cloud Storage · Docker</span>
+            <span class="k-stack">Google Cloud · Compute Engine · Cloud Run · Firestore · Docker</span>
             <span class="k-lead">Stawianie maszyn, wdrożenia, przeglądy projektów
               i porządki w kosztach.</span>
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Poza pisaniem kodu zajmuję się tym, na czym on chodzi. Stawiam maszyny
-              wirtualne od zera, wdrażam usługi w Cloud Run, konfiguruję uprawnienia
-              i dostępy, ustawiam harmonogramy oraz kontrolę stanu.</p>
-            <p>Robiłem przeglądy projektów w chmurze: co realnie generuje koszty, gdzie
+            <p>Zajmuję się też tym, na czym kod chodzi. Stawiam maszyny wirtualne od zera,
+              wdrażam usługi w Cloud Run, ustawiam harmonogramy i kontrolę stanu, a kontom
+              serwisowym daję tylko te uprawnienia, których potrzebują.</p>
+            <p>Robiłem przeglądy projektów w chmurze: co naprawdę generuje koszty, gdzie
               leżą zduplikowane dane w kubełkach, które uprawnienia są szersze, niż
-              powinny. Przy jednym z systemów przeprowadziłem też przegląd bezpieczeństwa
-              i znalazłem zabezpieczenie logowania, które formalnie istniało, ale
-              w praktyce nigdy się nie uruchamiało.</p>
+              powinny. Przy przeglądzie bezpieczeństwa jednego z systemów znalazłem
+              zabezpieczenie logowania, które istniało w kodzie, a w praktyce nigdy
+              się nie uruchamiało.</p>
           </div>
         </details>
 
@@ -443,8 +488,8 @@ footer a{color:var(--acc)}
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Gra przekazuje stan rozgrywki, program dodatkowo odczytuje nazwę miejsca z ekranu. Podpowiedź ląduje na drugim monitorze albo leci głosem.</p>
-            <p>722 rzuty na dziewięciu mapach.</p>
+            <p>Gra przekazuje stan rozgrywki, a program dodatkowo odczytuje nazwę miejsca z ekranu. Podpowiedź pojawia się na drugim monitorze albo leci głosem.</p>
+            <p>W bazie są 722 rzuty na dziewięciu mapach.</p>
           </div>
         </details>
 
@@ -453,14 +498,14 @@ footer a{color:var(--acc)}
             <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m12 7.5 3.8 2.8-1.5 4.5h-4.6l-1.5-4.5z"/><path d="M12 3.5v4M4.6 9.3l3.6 2.6M19.4 9.3l-3.6 2.6M7.7 19.6l2-4.8M16.3 19.6l-2-4.8"/></svg></span><span class="k-t">Gra o karierze piłkarza</span>
               <span class="k-rola">własny</span></span>
             <span class="k-stack">Python · Pygame</span>
-            <span class="k-lead">Gra, w której prowadzisz karierę jednego piłkarza:
-              od młodzieżówki, przez transfery, po koniec kariery.</span>
+            <span class="k-lead">Prowadzisz karierę jednego piłkarza: od młodzieżówki,
+              przez transfery, po koniec kariery.</span>
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>67 lig i ponad tysiąc klubów. Sezon liczy się w tle, kluczowe akcje
+            <p>67 lig i ponad tysiąc klubów. Sezon liczy się w tle, a najważniejsze akcje
               rozgrywasz sam.</p>
-            <p>W grach tego typu o golu decyduje zwykle rzut kostką. Tutaj piłka leci po torze, a bramkarz może jej nie dosięgnąć. Fizykę odtworzyłem z gry sprzed lat, rozkładając ją na czynniki pierwsze.</p>
+            <p>W grach tego typu o golu decyduje zwykle rzut kostką. Tutaj piłka leci po torze i bramkarz może jej nie dosięgnąć. Fizykę odtworzyłem na wzór gry sprzed lat.</p>
           </div>
         </details>
 
@@ -474,14 +519,12 @@ footer a{color:var(--acc)}
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Zamiast pięciu aplikacji do pięciu rzeczy jedna, w której wszystko widać
-              obok siebie. Wydatki z podziałem na kategorie, nawyki odhaczane dzień po dniu,
-              kalendarz spięty z kontem Google.</p>
-            <p>Logowanie oparte o solone hasła i sesje po stronie serwera, nie o gotową
-              wtyczkę. Do tego moduł, który opisuje słowami, co wynika z liczb: gdzie
-              uciekają pieniądze, który nawyk się sypie. Działa na modelu uruchomionym
-              lokalnie, a gdy ten nie odpowiada, wchodzą zwykłe reguły, więc funkcja
-              nie znika.</p>
+            <p>Jedna aplikacja zamiast pięciu, z wszystkim widocznym obok siebie: wydatki
+              w kategoriach, nawyki odhaczane dzień po dniu, kalendarz spięty z kontem Google.</p>
+            <p>Logowanie napisałem sam, na solonych hasłach i sesjach po stronie serwera.
+              Osobny moduł opisuje słowami, co wynika z liczb, np. gdzie uciekają pieniądze
+              i który nawyk się sypie. Korzysta z modelu uruchomionego lokalnie, a gdy model
+              nie odpowiada, przejmują zwykłe reguły.</p>
             <p>Obroniona w 2026 roku na Uniwersytecie Łódzkim.</p>
           </div>
         </details>
@@ -491,18 +534,16 @@ footer a{color:var(--acc)}
             <span class="k-gora"><span class="k-ik" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h11v9H8.5L4.5 17v-3H3z"/><path d="M6.5 9.5h4M8.5 7.5v4"/><path d="M20.5 19h-9v-2l3-3h6z"/></svg></span><span class="k-t">Palabra, nauka hiszpańskiego</span>
               <span class="k-rola">własny</span></span>
             <span class="k-stack">Flutter · Dart</span>
-            <span class="k-lead">Aplikacja na telefon. Słówka przewija się kciukiem
+            <span class="k-lead">Aplikacja na telefon, w której słówka przewija się kciukiem
               jak filmiki w mediach społecznościowych.</span>
             <svg class="k-zn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="k-body">
-            <p>Aplikacje do nauki słówek zwykle wyglądają jak zadanie domowe i po tygodniu
-              się je porzuca. Tutaj układ jest taki sam jak w aplikacjach, w których ludzie
-              i tak spędzają godziny: jedno słowo na ekran, przewijasz w górę, następne.</p>
-            <p>Pod spodem działa algorytm powtórek rozłożonych w czasie. Sam ustala,
-              kiedy pokazać dane słowo ponownie: to, które znasz, wraca za tydzień,
-              to, na którym się potykasz, za dzień. Dzięki temu nauka trzyma się dłużej
-              niż do najbliższego sprawdzianu.</p>
+            <p>Aplikacje do słówek zwykle wyglądają jak zadanie domowe i po tygodniu
+              się je porzuca. Tu układ jest taki jak tam, gdzie ludzie i tak spędzają
+              godziny: jedno słowo na ekran, przesunięcie w górę i następne.</p>
+            <p>Pod spodem działa algorytm powtórek rozłożonych w czasie. Słowo, które znasz,
+              wraca za tydzień, a to, na którym się potykasz, już następnego dnia.</p>
           </div>
         </details>
 
@@ -511,20 +552,22 @@ footer a{color:var(--acc)}
 
     <section class="blok" aria-labelledby="llm">
       <h2 id="llm">Sztuczna inteligencja w praktyce</h2>
-      <p>Buduję rozwiązania oparte o modele językowe tam, gdzie da się je kontrolować.
-        W asystencie rozmów model nie pisze wolnego tekstu, tylko składa wypowiedzi
-        z wcześniej zatwierdzonych zdań, więc firma zawsze wie, co trafia do klienta.
-        Poza tym: model jako pomoc przy odczycie pisma ręcznego i moduł podsumowań
-        w pracy dyplomowej.</p>
+      <p>Modele językowe wpinam tam, gdzie da się kontrolować, co z nich wychodzi.
+        Asystent rozmów w Reload składa wypowiedzi z zatwierdzonych zdań, więc firma
+        wie, co trafia do klienta. Agent na maszynie w chmurze steruje zalogowaną
+        przeglądarką i przegląda giełdy, a wiążące kroki zostawia człowiekowi.</p>
+      <p>W serwisie kliniki Gemini robi transkrypcje filmów, w odczycie ksiąg pomaga
+        przy trudnych skanach, a w pracy dyplomowej lokalny model opisuje wnioski z danych.
+        Na co dzień pracuję z Claude Code i serwerami MCP.</p>
       <p><b>Znam zakres ścieżki Claude Certified Architect - Foundations</b>: projektowanie
         systemów opartych o modele, integracje, inżynieria promptu, zarządzanie kontekstem.</p>
     </section>
 
     <section class="blok" aria-labelledby="jak">
       <h2 id="jak">Jak pracuję</h2>
-      <p>Zanim napiszę kod, próbuję zrozumieć cudzy format, przepis albo protokół.
-        Sprawdzam własne założenia zamiast przyjmować je na słowo, a wyniki podaję
-        z liczbami, również wtedy, gdy wychodzą przeciwko temu, co budowałem.</p>
+      <p>Zanim napiszę kod, czytam cudzy format, przepis albo dokumentację API. Regułę,
+        która coś odrzuca, sprawdzam testem, który przy zepsutej regule naprawdę pada.
+        Wyniki podaję z liczbami, także te niewygodne, jak brak przewagi w porównywarce kursów.</p>
     </section>
 
     <section class="blok" aria-labelledby="edukacja">
